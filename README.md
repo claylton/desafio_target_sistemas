@@ -13,6 +13,7 @@ f) 20
 
 ## Questão 3:
 (Utilizei a linguagem Dart)
+``` dart
 void calcularFaturamento(List<double> faturamentos) {
   double menorFaturamento = double.infinity;
   double maiorFaturamento = 0;
@@ -31,6 +32,7 @@ void calcularFaturamento(List<double> faturamentos) {
       diasComFaturamento++;
     }
   }
+```
 
   double mediaAnual = somaFaturamento / diasComFaturamento;
   int diasAcimaDaMedia = faturamentos.where((f) => f > mediaAnual).length;
@@ -70,11 +72,13 @@ Tabelas:
     - sigla_estado
 
 Consulta SQL
+``` sql
 SELECT c.id_cliente, c.razao_social, t.numero 
 FROM Clientes c
 JOIN Telefones t ON c.id_cliente = t.id_cliente
 JOIN Estados e ON c.estado = e.id_estado
 WHERE e.sigla_estado = 'SP';
+```
 
 ## Questão 5:
 O caminhão estará mais próximo de Ribeirão Preto.
